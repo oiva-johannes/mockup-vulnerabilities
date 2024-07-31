@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigiWine</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'main.css' %}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">DigiWine</a>
+            </div>
+            <ul class="nav-links">
+                <a href="/cellar/">Cellar</a>
+                {% if user.is_authenticated %}
+                <li>
+                    <form action='/logout/' method="POST">
+                        {% csrf_token %}
+                        <button type="submit">Log Out</button>
+                    </form>
+                </li>
+                {% else %}
+                <li><a href="/login">Log In</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <h1 class="center-element">Welcome to your digital winecellar</h1>
+    </div>
+</body>
+</html>
