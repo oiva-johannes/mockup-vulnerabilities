@@ -3,4 +3,4 @@
 This app is done with django and postgres. To get postgres working you need to have it and its python dependencies installed.
 After that you need to set up the DATABASES config in django's settings.py.
 
-![cellar-test](https://github.com/user-attachments/assets/087ecb03-1113-4ef9-a4f8-3448c9241873)
+![Screenshot from 2024-07-31 22-33-28](https://github.com/user-attachments/assets/295acd31-0fc2-4a59-b3ac-65ae1ee2a668)
